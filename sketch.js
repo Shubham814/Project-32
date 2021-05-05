@@ -19,6 +19,8 @@ var img;
 
 var bg,backgroundImg;
 
+
+
 var gamestate = "onSling";
 
 function preload(){
@@ -93,7 +95,7 @@ function draw() {
   Engine.update(engine);
  
 
-  fill(255);
+  fill(100);
   text("Press Space to Get a Chance to Play!!!",1150,350);
   
   
@@ -174,13 +176,11 @@ async function getTime(){
   var hour = dateTime.slice(11,13);
   console.log(hour);
 
-  if(hour >= 06 && hour <= 17){
-    bg = rgb(255,255,255);
-  } else if (hour >= 17 && hour <= 19){
-    bg = rgb(255,153,51);
+  if(hour >= 06 && hour <= 15){
+    bg = ("white");
   } else {
-    bg = rgb(55, 43, 43);
+    bg = ("black");
   }
-
+  console.log(bg);
   backgroundImg = bg;
 }
